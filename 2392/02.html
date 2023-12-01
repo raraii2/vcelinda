@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        #countdown {
+            font-size: 2em;
+            margin: 20px;
+            color: #333;
+        }
+        #redirectBtn {
+            display: none;
+            background-color: #ff69b4;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Surpresa</h1>
+<div id="countdown"></div>
+<button id="redirectBtn" onclick="redirectToAnotherSite()">Surprise!</button>
+
+<script>
+   
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 01, 2023 01:00:00").getTime();
+
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        // Calculate days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // Redirect to another site when the countdown reaches 00:00
+        if (distance < 0) {
+            clearInterval(x);
+            location.href = "video.html";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>

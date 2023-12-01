@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(luz.avif);
+    background-size: cover;
+}
+
+header {
+    background-color: #33333300;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#playlist {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: rgba(158, 40, 148, 0.349);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+button {
+    background-color: #af4c8298; /* Cor de fundo verde */
+    color: white;
+    padding: 10px 20px; /* Aumentei o padding para um visual mais espaçado */
+    border: 2px solid #af4c6d; /* Adicionei uma borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adicionei uma transição suave na cor de fundo */
+}
